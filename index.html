@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- upd: 1. Подключить JS и CSS файлы для подсветки кода-->
+<link rel="stylesheet" href="css/default.min.css">
+<script src="js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<style>
+body{ 
+background-color:#4f7942;
+}
+.box{
+display:block;
+width:800px;
+height:600px;
+padding:30px 50px;
+backgroung-color:white;
+box-shadow:0 2px 6px rgba(0, 0, 0, .1);
+border :1px solid rgba(0, 0, 0, .3);
+border-radius:20px;
+text-shadow:0 2px 2px rgba(0, 0, 0, .1);
+font-family: Arial,sans-serif;
+font-size:40px;
+color:rgb(0, 0, 0);
+}
+
+</style>
+    </head>
+
+    <body class="impress-not-supported">    
+       
+        <div id="impress" >
+
+<!--первый слайд-->
+<div class="step box "  data-x="0" data-y="0">
+ <h1> На что способен impress.js?</h1>
+</div>
+
+<!-- таблица-->
+<div class="step" style="width:600px;" data-x=2000 data-scale="1.5" data-rotate-y="45">
+    <table class="iksweb">
+    <tbody>
+        <tr>
+            <td>                                                
+
+                                                      Имя</td>
+            <td>
+
+                                               Открытие</td>
+        </tr>
+        <tr>
+            <td>
+
+                                                    радио</td>
+            <td>
+                     
+                                                    Попов</td>
+        </tr>
+        <tr>
+            <td>
+
+                                                    фонограф</td>
+            <td>
+
+                                                  Эдисон</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+<!-- второй слайд -картинка-->
+
+ <div class="step box" data-x="0" data-y="1000" data-rotate-y="90"> <!--data-slide=-->
+ <img src="images/2709014165.jpg"style="position: absolute; 
+ left: 0px; top: 0px; z-index: -1; width: 900px; height: 800px"> 
+ </div>
+
+<!--третий слайд-->
+
+ <div class="step box" data-x="2000" data-y="1000" data data-y= data-z="600" data-rotate-y="180">
+
+
+
+<iframe src="https://giphy.com/embed/3oKIPnAiaMCws8nOsE" width="700" height="600" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-kitten-computer-3oKIPnAiaMCws8nOsE"></a></p>
+</div>
+
+
+
+
+
+<!--четверный слайд-Видео из ютуба-->
+<div class="step box" data-x="3200" data-y="1500">
+<iframe width="660" height="415" src="https://www.youtube.com/embed/fNZJa8Ro_ww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ </div>
+
+
+    <div id="big" class="step" data-x="3700" data-y="3100" data-rotate="180" data-scale="6"  style="font-size: 4em; line-height: 2em;">
+        <p>Реализуй <b>гениальные</b> <span class="thoughts">задумки</span></p>
+    </div>
+
+
+
+<!--upd: пятый слайд -- код -->
+
+<div class="step box "  data-x="6700" data-y="3100" >
+ <h1> Код</h1>
+
+
+<!-- снова вручную настроил размер шрифта -->
+<pre><code class="pascal" style="font-size: 0.5em; line-height: 1.5em;">
+program z_z;
+var x1,y1,x2,y2,L: real;
+begin
+  write('Введите координаты первой точки (x1, y1) через пробел: ');
+  read(x1, y1);
+   write('Введите координаты второй точки (x2, y2) через пробел: ');
+  read(x2, y2);
+  writeln('Расстояние: ', sqrt(sqr(x2-x1)+sqr(y2-y1)));
+end.
+
+ </code></pre>
+
+</div>
+
+
+
+        <!-- подключение файлов JavaScript -->
+     
+        <script src="https://cdn.jsdelivr.net/gh/impress/impress.js@2.0.0/js/impress.js"></script>
+
+        <script>window.impress || document.write('<script src="https://cdn.jsdelivr.net/gh/impress/impress.js@2.0.0/js/impress.js">\x3C/script>');</script>
+        <script>impress().init()</script>
+
+
+        
+        <script src="http://fred-wang.github.io/mathjax.js/mpadded-min.js"></script> <!--матем-->
+        
+
+           <!-- <script src="plugin/math/math.js"></script>          -->
+    
+    </body>
+</html>
