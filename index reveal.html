@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=no"> 
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+
+		<link rel="stylesheet" href="dist/theme/serif.css">
+
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+</head>
+	      <body>
+	      	
+
+<div class="reveal">
+
+<!-- контейнер для слайдов -->
+<div class="slides"> 			
+
+
+
+
+<!-- первый слайд -->
+<section data-background-color="#B0C4DE"><h1>Веб-фреимворки для создания презентаций</h1></section>  
+
+<!-- 2 -->
+<section data-background-color="#B0C4DE">
+       
+		<section data-auto-animate>
+			<h1>Цель проекта:</h1> <!--анимация-->
+		</section>
+
+		<section data-auto-animate>
+			<h1>анализ популярных веб-фреимворков</h1>
+			<h1>для создания презентаций</h1>
+		</section>
+
+		<section >
+		  <ul> 
+		  <h1>Задачи проекта:</h1>
+			<li class="fragment"><h3>Поиск популярных веб-фреимворков</h3></li>
+			<br>
+			<li class="fragment"><h3>Изучение возможностей фреимворков impress.js,reveal.js</h3></li>
+			<br>
+			<li class="fragment"><h3>Создание презентации на одном из фреимворков</h3></li>
+			<br>
+			<li class="fragment"><h3>Сравнительный анализ фреиворков, в том числе
+			 сравнение с популярными решениями для создания презентаций
+			(Prezi,Power Point,Google Slides)</h3></li>
+			<ul> 
+		</section>
+</section>
+
+
+
+<section data-background-color="#B0C4DE" style="text-align: left;"><h1>Почему веб-фреимворки?</h1>
+<h3>Создание презентации с помощью кода(для любителей писать код)</h3>
+<h3>Более легкая работа в текстовых редакторах, совместная работа и отслеживание изменений в тексте</h3><br>
+<h3>Удобнее размещать и показывать в онлайн(для html необходим только браузер)</h3>
+</section> 
+
+
+<section data-background-color="#B0C4DE">
+	<h1>Усторойство reveal.js и impress.js</h1>
+	<br>
+	<li><h3>html файл(презентация)</h3></li>
+	<br>
+	<li><h3>css файл(заранее встроенные стили)</h3></li>
+	<br>
+	<li><h3>js файлы (код на языке java script,обработчики событий и анимации)</h3></li>
+</section>
+
+<section  data-background-color="#B0C4DE"> 
+  <h1>Базовые возможности reveal js:</h1><br>
+<style>
+  .fragment.blur {
+    filter: blur(5px);
+  }
+  .fragment.blur.visible {
+    filter: none;
+  }
+</style>
+<section style="text-align: left;font-size: 2em; line-height: 1.5em;">
+	<br><br>
+  <li class="fragment custom blur">вставка картинок</li>
+  <li class="fragment custom blur">gif</li>
+  <li class="fragment custom blur">вставка формул</li>
+   <li class="fragment custom blur">таблица</li>
+   <li class="fragment custom blur">вставка кода и подсветка</li>
+   <li class="fragment custom blur">смена стиля презентации</li>
+</section>
+</section>
+
+
+
+<!-- блок с описанием стиля -->
+<style text>
+    :root { --r-main-font-size: 21px; }  <!-- шрифт был слишком большим, я подключила что-то-->
+</style>   
+
+
+
+
+<section data-background-color="#B0C4DE"><!--картинка-->
+	<section>
+	  <img data-src="image.png">
+			  <iframe data-src="https://losper.net/uploads/monthly_2020_07/large.15889264822019-02-19_12-25-09.png.b137d08a9dc8740e314f99db21a2a459.png"  style="width: 900px; height: 800px"> 
+	
+
+				</iframe>
+  </section>
+
+
+	<section><!--каритинка-->
+			<img src="https://64.media.tumblr.com/0087c631daa98f7929b4d312730c5ea0/tumblr_pp1kdaw9ek1xp1nxxo1_640.gifv">
+	</section>
+
+
+	<section>
+
+			<iframe height="600" src="https://www.youtube.com/embed/24wffB2jV04" title="how to pronounce programming languages. Humour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	
+	</section>
+
+ <section>
+	<video data-autoplay src="видео\impress.js __ Tutorial - Part 1_ The basics.mp4"></video>
+ </section>
+
+
+</section> 
+
+
+
+
+<!--вставка картинки задним планом-->
+<section data-background-image="images\pict.png"
+          data-background-size="1200px">
+
+          <h1>картинка на задний план</h1>
+</section>
+	
+
+<section data-background-color="#B0C4DE"><section>
+<h1>Подстветка кода</h1>
+<pre><code data-line-numbers="|7-11|18-19|" data-ln-start-from="1">
+   begin
+writeln('Введите кол-во проверок');
+readln(h);
+for f := 1 to h do
+begin
+write('Введите значение a=');readln(a);
+write('Введите значение b=');readln(b);
+write('Введите значение c=');readln(c);
+write('Введите значение j=');readln(j);
+write('Введите значение x=');readln(x);
+if (a<=j) and (b<=x) or //Условия
+(b<=j) and (a<=x) or
+(a<=j) and (c<=x) or
+(c<=j) and (a<=x) or
+(c<=j) and (b<=x) or
+(b<=j) and (c<=x)
+then Writeln('соответсвует условию');
+else Writeln('не соответствует условию');
+readln;
+end;
+end. 
+  </pre></code>
+</section>
+<section> <img src="images\code.png" width=900px></section>
+</section>
+
+
+
+<!--3. вставка кода-->
+<section data-background-color="#B0C4DE">
+	<section>
+	<br>
+	<h1>Как оно работает?</h1>
+</section>
+
+	<section><h1>Формула в формате LaTeX</h1>
+			<img src="images\formula.png" width=900px>
+
+			 $$x_1,_2 = {-b \pm \sqrt{b^2-4ac} \over 2a}$$
+	</section>
+
+  <section>
+	<h1 style="text-align: left;font-size: 4em; line-height: 1em;"> Картинка: </h1>
+			<img src="images\photo.png" width=700px>
+	</section>
+
+<section>
+		<h1 style="text-align: left;font-size: 4em; line-height: 1em;"> Видео: </h1> 
+	<img src="images\video.png" width=900px>
+	</section>
+</section>
+
+<section data-background-color="#B0C4DE">
+	<section>
+	<h1>Смена стиля</h1>
+	<h1 style="text-align: left;font-size: 1em; line-height: 3Sem;">
+	     ( достаточно изменить 1 строку кода )</h1>
+	<img src="images\team.png" width=900px>
+</section>
+<section>
+	<img src="images\cod_new.png" width=900px>
+</section>
+<section style="background-color:	#4682B4";>
+	<img src="images\stile_new.png" width=900px>
+</section>
+</section>
+
+<section>
+
+
+<section data-markdown >
+  <textarea data-template>
+    ## **Markdown**— это облегчённый язык разметки для форматирования текстовых документов.
+    ---
+    ## Идея Markdown в том, чтобы было **проще читать, писать и редактировать** тексты.
+    ---
+    ### У Markdown есть много реализаций и диалектов. Разные платформы расширяют инструментарий языка для своих нужд.
+  </textarea>
+</section>
+
+
+
+<section data-background-color="#B0C4DE"><img src="images\primer.png" width=900px></section>
+<section data-background-color="#B0C4DE"><img src="images\markSt.png" width=900px></section>
+<section data-background-color="#B0C4DE"><img src="images\MarkZag.png" width=900px></section>
+
+
+</section>
+
+
+<section style="background-color:"#e9edf5>   <!--цвет таблицы-->     
+<section style="text-align: left;font-size: 1em; line-height: 1.1em;"> 
+			<table style="background-color:	#4682B4";>                                          
+			<thead> 
+					<tr> <th>Параметры сравнения</th>
+			         <th> PowerPoint</th>
+			         <th>Google Slides</th>
+			         <th>Impress.js</th>
+			         <th>Revel.js</th>
+			         <th>Prezi</th>
+					</tr>
+			</thead>
+
+			<tbody>
+					<tr> 	<td>Вставка фото/видео/айдиофайлов</td>   <td> +</td> 			<td> +</td>				<td> +</td>																			<td> +</td>				<td> +</td>					</tr>
+					<tr>	<td>Вставка таблицы</td>            			<td> +</td>       <td> +</td>   		<td> +     с помощью Таbles Generation</td>			<td> +</td>				<td> +</td>	  			</tr>
+					<tr>	<td>Заметки докладчика</td>								<td> +</td>
+					<td> +</td>
+					<td> -</td>
+					<td> +</td>
+					<td> -</td>
+					</tr>
+
+					<tr>
+					<td>Совместная работа</td>
+					<td> +   через РowerPointOnline</td>
+					<td> +</td>
+					<td> -    через git (GitHub и аналоги)</td>
+					<td> -    через git (GitHub и аналоги)</td>
+					<td> +</td>
+					</tr>
+
+					<tr>
+					<td>Преобразование текста в речь</td>
+					<td> +</td>
+					<td> +</td>
+					<td> +</td>
+					<td> +</td>
+					<td> -</td>
+					</tr>
+
+					<tr>
+					<td>Печать pdf</td>
+					<td> +</td>
+					<td> +</td>
+					<td> +</td>
+					<td> +</td>
+					<td> +</td>
+					</tr>
+
+					<tr>
+					<td>Вставка формул</td>
+					<td> +</td>
+					<td> +</td>
+					<td> -</td>
+					<td> +</td>
+					<td> -</td>
+					</tr>
+
+					<tr>
+					<td>Подстветка кода</td>
+					<td> -</td>
+					<td> -  через дополнения</td>
+					<td> -  с помощью сторонних JavaScript библиотек </td>
+					<td> +</td>
+					<td> -</td>
+					</tr>
+
+					<tr>
+					<td>Переход по ссылке</td>
+					<td> + через PowerPointOnline</td>
+					<td> +</td>
+					<td> + через веб-хостинг (GitHub) </td>
+					<td> + через веб-хостинг (GitHub) </td>
+					<td> +</td>
+					</tr>
+					<tr>
+					<td>Текстовый формат</td>
+					<td> -</td>
+					<td> -</td>
+					<td> +</td>
+					<td> +</td>
+					<td> -</td>
+					</tr>
+		</tbody>
+	</table>
+</section>
+</section>
+
+
+
+</div>
+</div>
+		
+     
+      
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/zenburn/highlight.js"></script>
+            <script src="plugin/highlight/highlight.js"></script>
+            <script src="plugin/math/math.js"></script>                 <!--матем-ий-->
+<script>
+  Reveal.initialize({ plugins: [ RevealMath.KaTeX ] });
+</script>
+		<script>
+				// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+
+
+		
+	</body>
+</html>
